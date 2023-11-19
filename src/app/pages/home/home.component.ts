@@ -30,6 +30,6 @@ export class HomeComponent {
       loop: true,
     };
 
-    const typed = new Typed('.typed-element', options);
+    new Typed('.typed-element', options);
   }
 }
