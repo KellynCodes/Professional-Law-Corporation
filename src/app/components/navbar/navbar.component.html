@@ -7,10 +7,14 @@
     <!-- Uncomment below if you prefer to use a text logo -->
     <!-- <h1 class="logo mr-auto"><a href="index.html">Imperial</a></h1> -->
 
-    <nav id="navbar" class="navbar">
+    <nav id="navbar" [class]="isNavbarOpen ? 'navbar-mobile' : 'navbar'">
       <ul>
         <li>
-          <a class="nav-link scrollto" routerLink="/" routerLinkActive="active"
+          <a
+            (click)="toggleNavbar()"
+            class="nav-link scrollto"
+            routerLink="/"
+            routerLinkActive="active"
             >Home</a
           >
         </li>
@@ -20,6 +24,7 @@
         </li>
         <li>
           <a
+            (click)="toggleNavbar()"
             class="nav-link scrollto"
             routerLink="practice-area"
             routerLinkActive="active"
@@ -28,6 +33,7 @@
         </li>
         <li>
           <a
+            (click)="toggleNavbar()"
             class="nav-link scrollto"
             routerLink="our-attorneys"
             routerLinkActive="active"
@@ -38,6 +44,7 @@
 
         <li>
           <a
+            (click)="toggleNavbar()"
             class="nav-link scrollto"
             routerLinkActive="active"
             routerLink="contact"
@@ -45,7 +52,11 @@
           >
         </li>
       </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
+      <i
+        (click)="toggleNavbar()"
+        [class]="isNavbarOpen ? 'bi-x' : 'bi-list'"
+        class="bi bi-list mobile-nav-toggle"
+      ></i>
     </nav>
     <!-- .navbar -->
   </div>
