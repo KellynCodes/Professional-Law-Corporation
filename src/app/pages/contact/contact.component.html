@@ -1,3 +1,4 @@
+<plc-alert [successMessage]="successMessage" [errorMessage]="errorMessage" />
 <!-- ======= Contact Section ======= -->
 <section id="contact">
   <div class="container" data-aos="fade-up">
@@ -33,7 +34,11 @@
 
       <div class="col-lg-5 col-md-8">
         <div class="form">
-          <form role="form" class="php-email-form">
+          <form
+            [formGroup]="contactForm"
+            (ngSubmit)="onSubmit()"
+            class="php-email-form"
+          >
             <div class="form-group">
               <input
                 type="text"
@@ -41,8 +46,17 @@
                 class="form-control"
                 id="name"
                 placeholder="Your Name"
+                formControlName="name"
                 required
               />
+              <h6
+                *ngIf="
+                  contactForm.get('name')?.touched &&
+                  contactForm.get('name')?.hasError('required')
+                "
+              >
+                Name is required.
+              </h6>
             </div>
             <div class="form-group mt-3">
               <input
@@ -51,6 +65,7 @@
                 name="email"
                 id="email"
                 placeholder="Your Email"
+                formControlName="email"
                 required
               />
             </div>
@@ -58,11 +73,20 @@
               <input
                 type="text"
                 class="form-control"
-                name="subject"
-                id="subject"
-                placeholder="Subject"
+                name="phone"
+                id="phone"
+                placeholder="phone"
+                formControlName="phone"
                 required
               />
+              <h6
+                *ngIf="
+                  contactForm.get('phone')?.touched &&
+                  contactForm.get('phone')?.hasError('pattern')
+                "
+              >
+                Invalid phone number format.
+              </h6>
             </div>
             <div class="form-group mt-3">
               <textarea
@@ -70,18 +94,30 @@
                 name="message"
                 rows="5"
                 placeholder="Message"
+                formControlName="message"
                 required
               ></textarea>
+              <h6
+                *ngIf="
+                  contactForm.get('message')?.touched &&
+                  contactForm.get('message')?.hasError('required')
+                "
+              >
+                Message is required.
+              </h6>
+              <h6
+                *ngIf="
+                  contactForm.get('message')?.touched &&
+                  contactForm.get('message')?.hasError('minlength')
+                "
+              >
+                Message cannot be less than 100 characters.
+              </h6>
             </div>
-            <div class="my-3">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">
-                Your message has been sent. Thank you!
-              </div>
-            </div>
-            <div class="text-center">
-              <button type="submit">Send Message</button>
+            <div class="text-center mt-3">
+              <button type="submit">
+                {{ isSending ? "Sending..." : "Send Message" }}
+              </button>
             </div>
           </form>
         </div>

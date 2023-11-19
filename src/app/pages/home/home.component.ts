@@ -19,12 +19,12 @@ export class HomeComponent {
   private initTyped() {
     const options = {
       strings: [
-        ' A Professional Law Corporation',
+        'A Professional Law Corporation',
         'Your Trusted Advocates in Calabasas, CA',
         'Navigating Legal Challenges with Excellence and Integrity',
       ],
       typeSpeed: 50,
-      backSpeed: 30,
+      backSpeed: 15,
       showCursor: true,
       cursorChar: '|',
       loop: true,

@@ -18,9 +18,21 @@
             >Home</a
           >
         </li>
-        <li><a class="nav-link scrollto" routerLink="about">About</a></li>
         <li>
-          <a class="nav-link scrollto" routerLink="why-us">Why Choose Us</a>
+          <a
+            (click)="toggleNavbar()"
+            class="nav-link scrollto"
+            routerLink="about"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            (click)="toggleNavbar()"
+            class="nav-link scrollto"
+            routerLink="why-us"
+            >Why Choose Us</a
+          >
         </li>
         <li>
           <a
@@ -48,7 +60,7 @@
             class="nav-link scrollto"
             routerLinkActive="active"
             routerLink="contact"
-            >Contact</a
+            >Contact Us</a
           >
         </li>
       </ul>
