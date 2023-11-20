@@ -1,18 +1,7 @@
 <!-- This is an example component -->
-<div class="d-flex vh-100 vw-100 align-items-center bg-light">
-  <div
-    class="container d-flex align-items-center justify-content-center px-3 text-secondary md:flex-row"
-  >
-    <div class="max-w-md">
-      <div class="font-dark h1 font-weight-bold">404</div>
-      <p class="h3 font-weight-light">Sorry we couldn't find this page.</p>
-      <p class="mb-4">
-        But don't worry, you can find plenty of other things on our homepage.
-      </p>
-
-      <a routerLink="/" class="custom-btn">BACK TO HOMEPAGE</a>
-    </div>
-    <div class="max-w-lg">
+<div class="container-fluid d-flex align-items-center bg-light">
+  <div class="row m-auto">
+    <div class="custom-w">
       <svg
         id="Layer_1"
         data-name="Layer 1"
@@ -272,6 +261,15 @@
           d="M857.63,805C860.5,803.5,830.5,512.5,746.5,400.5s-104-130-104-130-2,85,34,145,78,160,90,182,56,223,56,223Z"
         />
       </svg>
+    </div>
+    <div class="custom-w">
+      <div class="font-dark h1 font-weight-bold">404</div>
+      <p class="h3 font-weight-light">Sorry we couldn't find this page.</p>
+      <p class="mb-4">
+        But don't worry, you can find plenty of other things on our homepage.
+      </p>
+
+      <a routerLink="/" class="custom-btn">BACK TO HOMEPAGE</a>
     </div>
   </div>
 </div>

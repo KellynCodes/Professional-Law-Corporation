@@ -1,0 +1,9 @@
+.custom-w{
+    width: 50%;
+}
+
+@media (max-width: 768px){
+    .custom-w{
+        width: 100%;
+    }
+}
