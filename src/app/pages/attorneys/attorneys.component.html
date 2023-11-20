@@ -1,1 +1,24 @@
-<p>attorneys works!</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-flex justify-content-center g-2 w-100 flex-wrap">
+      @for (attorney of attorneyList(); track attorney.id) {
+      <div class="card m-3" style="width: 25rem">
+        <img
+          class="card-img-top"
+          [src]="attorney.imageUrl"
+          [alt]="attorney.name"
+        />
+        <div class="card-body">
+          <h4 class="card-title">{{ attorney.name }}</h4>
+          <p class="card-text">{{ attorney.title }}</p>
+          <a
+            [routerLink]="['/attorney', attorney.id]"
+            class="bg-dark rounded text-white p-2"
+            >See Profile</a
+          >
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>

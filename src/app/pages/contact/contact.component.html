@@ -33,7 +33,7 @@
             <p>
               <a
                 class="text-dark"
-                href="tel:info&commat;stevwien"
+                href="mailto:info&commat;stevwien"
                 target="_blank"
               >
                 info&commat;stevewien.com
@@ -43,7 +43,11 @@
 
           <div>
             <i class="bi bi-phone"></i>
-            <p>+1 5589 55488 55s</p>
+            <p>
+              <a class="text-dark" href="tel:04903-394309-439" target="_blank"
+                >+1 5589 55488 55
+              </a>
+            </p>
           </div>
         </div>
       </div>
@@ -84,6 +88,14 @@
                 formControlName="email"
                 required
               />
+              <h6
+                *ngIf="
+                  contactForm.get('email')?.touched &&
+                  contactForm.get('email')?.hasError('required')
+                "
+              >
+                Email is required.
+              </h6>
             </div>
             <div class="form-group mt-3">
               <input
@@ -132,7 +144,9 @@
             </div>
             <div class="text-center mt-3">
               <button type="submit">
-                {{ isSending ? "Sending..." : "Send Message" }}
+                @if(isSending()){
+                <span class="spinner-grow spinner-grow-sm"></span>}
+                {{ isSending() ? "Sending..." : "Send Message" }}
               </button>
             </div>
           </form>

@@ -6,10 +6,16 @@ import { AttorneysComponent } from './pages/attorneys/attorneys.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { PracticeAreaComponent } from './pages/practice-area/practice-area.component';
 import { WhyUsComponent } from './components/why-us/why-us.component';
+import { AttorneyComponent } from './pages/attorney/attorney.component';
 
 export const routes: Routes = [
   {
     path: '',
+    redirectTo: 'home',
+    pathMatch: 'full',
+  },
+  {
+    path: 'home',
     component: HomeComponent,
     title: 'Home',
   },
@@ -29,10 +35,16 @@ export const routes: Routes = [
     title: 'Our Attorneys',
   },
   {
+    path: 'attorney/:id',
+    component: AttorneyComponent,
+    title: 'Attorney',
+  },
+  {
     path: 'practice-area',
     component: PracticeAreaComponent,
     title: 'Practice Areas',
   },
+
   {
     path: 'why-us',
     component: WhyUsComponent,

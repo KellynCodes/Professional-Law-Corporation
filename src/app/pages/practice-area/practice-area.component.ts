@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { PracticeAreaDto, PracticeAreas } from '../../Data/Dto/practice.area';
 
 @Component({
   selector: 'plc-practice-area',
@@ -9,4 +10,6 @@ import { RouterLink } from '@angular/router';
   templateUrl: './practice-area.component.html',
   styleUrl: './practice-area.component.scss',
 })
-export class PracticeAreaComponent {}
+export class PracticeAreaComponent {
+  public practiceAreaList = signal<PracticeAreaDto[]>(PracticeAreas);
+}

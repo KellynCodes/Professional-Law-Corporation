@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-flex justify-content-center g-2 w-100 flex-wrap">
+      @for (attorney of attorneyList(); track attorney.id) {
+      <div class="card m-3" style="width: 30rem">
+        <img
+          class="card-img-top"
+          [src]="attorney.imageUrl"
+          [alt]="attorney.name"
+        />
+        <div class="card-body">
+          <h4 class="card-title">{{ attorney.name }}</h4>
+          <p class="card-text">{{ attorney.title }}</p>
+          <p class="card-text">{{ attorney.about }}</p>
+        </div>
+        <a routerLink="/our-attorneys" class="badge bg-dark p-2 text-white"
+          >Go back
+        </a>
+      </div>
+      }@empty {
+      <div
+        style="height: 5rem; width: auto"
+        class="d-flex justify-content-center align-items-center flex-col"
+      >
+        <a routerLink="/our-attorneys" class="p-2 rounded bg-accent text-white">
+          >No Attorney found! Click to go back</a
+        >
+      </div>
+      }
+    </div>
+  </div>
+</div>

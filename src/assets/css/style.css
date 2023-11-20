@@ -26,7 +26,10 @@ a:active,
 a:focus {
   color: #03c5ec;
   outline: none;
-  text-decoration: none;
+}
+
+.bg-accent {
+  background-color: #03c4eb;
 }
 
 p {

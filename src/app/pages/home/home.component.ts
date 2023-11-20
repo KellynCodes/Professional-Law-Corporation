@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CtaComponent } from '../../components/cta/cta.component';
 import Typed from 'typed.js';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'plc-home',
   standalone: true,
-  imports: [CommonModule, CtaComponent, RouterLink],
+  imports: [CommonModule, RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })

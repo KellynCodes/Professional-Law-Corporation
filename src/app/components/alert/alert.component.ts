@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 })
 export class AlertComponent {
   @Input()
-  public errorMessage: string | null | unknown = null;
+  public errorMessage = signal<string | null>(null);
   @Input()
-  public successMessage: string | null = null;
+  public successMessage = signal<string | null>(null);
 }
