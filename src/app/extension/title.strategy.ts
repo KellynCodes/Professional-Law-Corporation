@@ -11,7 +11,9 @@ export class TemplatePageTitleStrategy extends TitleStrategy {
   override updateTitle(routerState: RouterStateSnapshot) {
     const title = this.buildTitle(routerState);
     if (title !== undefined) {
-      this.title.setTitle(`OPTIMAL ORTHOPEDIC | ${title}`);
+      this.title.setTitle(
+        `Steven W. Weinshenk, A Professional Law Corporation | ${title}`
+      );
     }
   }
 }

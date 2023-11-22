@@ -177,7 +177,6 @@ h6 {
 
 #hero .actions a {
   font-family: "Raleway", sans-serif;
-  text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
@@ -638,22 +637,17 @@ section {
 
 @keyframes backgroundAnimation {
   0% {
-    background: transparent center center;
-    background-size: 0;
+    background-position: 0% 0%;
   }
   50% {
-    background: #00bfff center center;
-    background-size: 100%;
+    background-position: 100% 0%;
   }
   100% {
-    background-color: transparent;
-    background-size: 0;
+    background-position: 0% 0%;
   }
 }
-
 #cta .cta-btn {
   font-family: "Raleway", sans-serif;
-  text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
@@ -663,7 +657,9 @@ section {
   margin: 10px;
   border: 2px solid #fff;
   color: #fff;
-  transition: background-color 0.3s ease;
+  background: linear-gradient(to left, transparent 50%, #03c4eb 50%);
+  background-size: 200% 100%; /* This sets the size of the background gradient */
+  transition: background-position 0.3s ease;
   animation: backgroundAnimation 1s infinite;
 }
 
