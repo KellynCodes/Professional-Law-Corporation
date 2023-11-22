@@ -15,7 +15,11 @@
         <span class="typed-element"></span>
       </h2>
       <div class="actions">
-        <a routerLink="/about" class="btn-get-started">Get Started</a>
+        <a
+          (click)="navigate('/home', 'cta')"
+          class="cursor-pointer btn-get-started"
+          >Get Started</a
+        >
         <a routerLink="/practice-area" class="btn-services"
           >Our Practice Area</a
         >

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import Typed from 'typed.js';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'plc-home',
@@ -11,8 +11,13 @@ import { RouterLink } from '@angular/router';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
+  constructor(private router: Router) {}
   ngAfterViewInit() {
     this.initTyped();
+  }
+
+  navigate(link: string, fragment: string): void {
+    this.router.navigate([link], { fragment: fragment });
   }
 
   private initTyped() {
