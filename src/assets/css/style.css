@@ -659,8 +659,7 @@ section {
   color: #fff;
   background: linear-gradient(to left, transparent 50%, #03c4eb 50%);
   background-size: 200% 100%; /* This sets the size of the background gradient */
-  transition: background-position 0.3s ease;
-  animation: backgroundAnimation 1s infinite;
+  animation: backgroundAnimation 1.5s infinite;
 }
 
 #cta .cta-btn:hover {
