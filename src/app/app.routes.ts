@@ -29,16 +29,16 @@ export const routes: Routes = [
     component: ContactComponent,
     title: 'Contact Us',
   },
-  {
-    path: 'our-attorneys',
-    component: AttorneysComponent,
-    title: 'Our Attorneys',
-  },
-  {
-    path: 'attorney/:id',
-    component: AttorneyComponent,
-    title: 'Attorney',
-  },
+  // {
+  //   path: 'our-attorneys',
+  //   component: AttorneysComponent,
+  //   title: 'Our Attorneys',
+  // },
+  // {
+  //   path: 'attorney/:id',
+  //   component: AttorneyComponent,
+  //   title: 'Attorney',
+  // },
   {
     path: 'practice-area',
     component: PracticeAreaComponent,

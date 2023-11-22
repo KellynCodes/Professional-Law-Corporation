@@ -116,7 +116,8 @@ h6 {
 }
 
 #hero .hero-logo img {
-  max-width: 100%;
+  width: 12rem;
+  height: 12rem;
 }
 
 #hero .hero-container {
@@ -140,6 +141,10 @@ h6 {
   #hero h1 {
     font-size: 28px;
     line-height: 36px;
+  }
+
+  #her .hero-logo {
+    max-width: 50vh;
   }
 }
 
@@ -240,7 +245,8 @@ h6 {
 }
 
 #header .logo img {
-  height: 50px;
+  height: 4rem;
+  width: 4rem;
 }
 
 .scrolled-offset {
