@@ -636,6 +636,21 @@ section {
   padding-top: 20px;
 }
 
+@keyframes backgroundAnimation {
+  0% {
+    background: transparent center center;
+    background-size: 0;
+  }
+  50% {
+    background: #00bfff center center;
+    background-size: 100%;
+  }
+  100% {
+    background-color: transparent;
+    background-size: 0;
+  }
+}
+
 #cta .cta-btn {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
@@ -645,10 +660,11 @@ section {
   display: inline-block;
   padding: 8px 20px;
   border-radius: 2px;
-  transition: 0.5s;
   margin: 10px;
   border: 2px solid #fff;
   color: #fff;
+  transition: background-color 0.3s ease;
+  animation: backgroundAnimation 1s infinite;
 }
 
 #cta .cta-btn:hover {
