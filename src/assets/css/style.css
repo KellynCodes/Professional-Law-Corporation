@@ -143,7 +143,7 @@ h6 {
     line-height: 36px;
   }
 
-  #her .hero-logo {
+  #hero .hero-logo {
     max-width: 50vh;
   }
 }
@@ -216,12 +216,12 @@ h6 {
   background: #272525;
   transition: all 0.5s;
   z-index: 997;
-  height: 70px;
+  height: 7rem;
 }
 
 @media (max-width: 992px) {
   #header {
-    height: 60px;
+    height: 8rem;
   }
 }
 
@@ -244,8 +244,8 @@ h6 {
 }
 
 #header .logo img {
-  height: 4rem;
-  width: 4rem;
+  height: 7rem;
+  width: 10rem;
 }
 
 .scrolled-offset {
