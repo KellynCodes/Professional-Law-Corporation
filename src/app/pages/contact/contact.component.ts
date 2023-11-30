@@ -44,13 +44,13 @@ export class ContactComponent {
     try {
       this.isSending.set(true);
       const response = await emailjs.send(
-        'service_emnblen',
-        'template_pc53t6b',
+        'service_o4nulwo',
+        'template_wc268vp',
         {
           to_name: 'there',
           ...this.contactForm.value,
         },
-        'IANMnCbipO_NGY3LK'
+        'F4DQfMF0O0wjFR8J2'
       );
       if (response.status != HttpStatusCode.Ok) {
         this.isSending.set(false);
